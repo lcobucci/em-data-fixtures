@@ -20,6 +20,6 @@
         "phpunit/phpunit" : "*"
     },
     "autoload": {
-        "psr-0": { "Lcobucci\\Fixtures": "src/" }
+        "psr-0": { "Lcobucci\\Fixture": "src/" }
     }
 }
