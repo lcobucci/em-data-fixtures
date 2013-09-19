@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false" backupStaticAttributes="false" bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="DataFixture Test Suite">
+            <directory>test/Lcobucci/Fixtures</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

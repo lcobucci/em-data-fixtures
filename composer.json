@@ -1,0 +1,25 @@
+{
+    "name": "lcobucci/em-data-fixtures",
+    "type": "library",
+    "description": "Data Fixtures for all Doctrine Object Managers",
+    "keywords": ["database"],
+    "homepage": "http://www.doctrine-project.org",
+    "license": "MIT",
+    "authors" : [
+        {
+            "name" : "Luís Otávio Cobucci Oblonczyk",
+            "email" : "lcobucci@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "doctrine/data-fixtures": "2.0.*@dev",
+        "doctrine/orm": ">=2.2,<2.5-dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "*"
+    },
+    "autoload": {
+        "psr-0": { "Lcobucci\\Fixtures": "src/" }
+    }
+}
