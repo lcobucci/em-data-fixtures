@@ -17,5 +17,5 @@ interface ObjectManagerFixture extends Fixture
      *
      * @param ObjectManager $manager
      */
-    function setObjectManager(ObjectManager $manager);
+    public function setObjectManager(ObjectManager $manager);
 }
