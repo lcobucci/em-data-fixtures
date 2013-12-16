@@ -13,7 +13,7 @@ use Doctrine\Fixture\Event\PurgeFixtureEventListener;
  *
  * @author Luís Otávio Cobucci Oblonczyk
  */
-class EntityManagerEventSubscriber implements
+class ObjectManagerEventSubscriber implements
     EventSubscriber,
     ImportFixtureEventListener,
     PurgeFixtureEventListener
