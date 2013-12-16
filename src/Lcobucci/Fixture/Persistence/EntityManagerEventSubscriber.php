@@ -2,14 +2,14 @@
 
 namespace Lcobucci\Fixture\Persistence;
 
-use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\EventSubscriber;
 use Doctrine\Fixture\Event\FixtureEvent;
 use Doctrine\Fixture\Event\ImportFixtureEventListener;
 use Doctrine\Fixture\Event\PurgeFixtureEventListener;
+use Doctrine\ORM\EntityManagerInterface;
 
 /**
- * Object Manager Event Subscriber.
+ * Entity Manager Event Subscriber.
  *
  * @author Luís Otávio Cobucci Oblonczyk
  */
@@ -19,16 +19,16 @@ class EntityManagerEventSubscriber implements
     PurgeFixtureEventListener
 {
     /**
-     * @var ObjectManager
+     * @var EntityManagerInterface
      */
     private $manager;
 
     /**
      * Constructor.
      *
-     * @param ObjectManager $manager
+     * @param EntityManagerInterface $manager
      */
-    public function __construct(ObjectManager $manager)
+    public function __construct(EntityManagerInterface $manager)
     {
         $this->manager = $manager;
     }
@@ -51,11 +51,11 @@ class EntityManagerEventSubscriber implements
     {
         $fixture = $event->getFixture();
 
-        if ( ! ($fixture instanceof ObjectManagerFixture)) {
+        if ( ! ($fixture instanceof EntityManagerFixture)) {
             return;
         }
 
-        $fixture->setObjectManager($this->manager);
+        $fixture->setEntityManager($this->manager);
     }
 
     /**
@@ -65,10 +65,10 @@ class EntityManagerEventSubscriber implements
     {
         $fixture = $event->getFixture();
 
-        if ( ! ($fixture instanceof ObjectManagerFixture)) {
+        if ( ! ($fixture instanceof EntityManagerFixture)) {
             return;
         }
 
-        $fixture->setObjectManager($this->manager);
+        $fixture->setEntityManager($this->manager);
     }
 }
