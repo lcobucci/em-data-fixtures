@@ -1,6 +1,5 @@
 <?php
-
-namespace Doctrine\Fixture\Console;
+namespace Lcobucci\Fixture\Console;
 
 use Doctrine\Fixture\Executor;
 use Doctrine\Fixture\Filter\GroupedFilter;
