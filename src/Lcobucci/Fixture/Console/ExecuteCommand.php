@@ -53,10 +53,11 @@ class ExecuteCommand extends Command
     protected function updateFilter(InputInterface $input)
     {
         /** @var $helper DataFixtureHelper */
-        $helper = $this->getHelper('data-fixtures');
-        $filter = $helper->getFilter();
+        $helper    = $this->getHelper('data-fixtures');
+        $filter    = $helper->getFilter();
+        $groupList = $input->getOption('group');
 
-        if (($groupList = $input->getOption('group')) !== null) {
+        if (!empty($groupList)) {
             $filter->addFilter(new GroupedFilter($groupList, true));
         }
     }
