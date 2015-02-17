@@ -14,12 +14,14 @@
     "require": {
         "php": ">=5.3.2",
         "doctrine/data-fixtures": "2.0.*@dev",
-        "doctrine/orm": "~2.4"
+        "doctrine/orm": ">=2.4@dev",
+        "doctrine/dbal": ">=2.4@dev",
+        "doctrine/common": ">=2.4@dev"
     },
     "require-dev": {
         "phpunit/phpunit" : "*"
     },
     "autoload": {
-        "psr-0": { "Lcobucci\\Fixture": "src/" }
+        "psr-4": { "Lcobucci\\Fixture\\": "src/" }
     }
 }
